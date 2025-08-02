@@ -1,0 +1,45 @@
+/**************************
+Simple Rock paper scissors game program
+*/
+import java.util.*;
+public class Rock_Paper_Scissors{
+	public static void main(String[] args){
+	
+		//generate number
+		int number = (int) (Math.random() * 3);
+	
+		Scanner input = new Scanner(System.in);
+		System.out.print("Scissors(0), Rock(1), Paper(2) :");
+		
+		int result = input.nextInt();
+		
+			//provide conditions and given result
+			if(number == result){
+			    System.out.println("It is a draw. You and Computer choose the same"); 
+			}
+			else if(number == 1 && result == 0){
+			    System.out.println("Computer is Rock and you are Scissors. You Lose");
+			}
+			else if(number == 0 && result == 1){
+			    System.out.println("Computer is Scissors and you are Rock. You win");
+			}
+			else if(result == 2 && number == 0){
+			     System.out.println("Computer is Scissors and you are Paper.You lose");
+			}			
+			else if(result == 0 && number == 2){
+			     System.out.println("Computer is Paper and you are Sciscor.You Win");
+			}
+			
+			else if(number == 2 && result == 1){
+			    System.out.println("Computer is Paper and You are Rock. You Lose.");
+			}
+			else if(result == 2 && number == 1){
+			    System.out.println("Computer is Rock and You are Paper. You win");
+			}
+			else{
+			    System.out.println("Wrong game! Add the correct item between Rock Paper and Scissors");
+			}
+			
+	}
+}
+			
